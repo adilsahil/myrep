@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- NEwcheckbox Brush-->
+    <RadialGradientBrush x:Key="BrushCheckBoxNormal">
+        <GradientStop Color="#e5e6e7" Offset="0.0" />
+        <GradientStop Color="#b7b8b9" Offset="1" />
+    </RadialGradientBrush>
+    <LinearGradientBrush x:Key="BrushCheckBoxNormalBorder" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#CCC" Offset="0.0"/>
+                <GradientStop Color="#444" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <RadialGradientBrush x:Key="BrushCheckBoxSelected">
+        <GradientStop Color="#00ff99" Offset="0.0" />
+        <GradientStop Color="#00b06a" Offset="1" />
+    </RadialGradientBrush>
+    <LinearGradientBrush x:Key="BrushCheckBoxMouseOver" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFDCDADA" Offset="0"/>
+                <GradientStop Color="#CCC" Offset="1"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <!-- NEwcheckbox Brush-->
+
+    <!--common-->
+    <SolidColorBrush x:Key="BrushDisabledBorder" Color="LightGray"/>
+    <SolidColorBrush x:Key="BrushDisabled" Color="#FFBABABA"/>
+    <SolidColorBrush x:Key="Foreground40" Color="#FF404040"></SolidColorBrush>
+    <SolidColorBrush x:Key="Foreground8C" Color="#FF8C8C8C"></SolidColorBrush>
+    <SolidColorBrush x:Key="DisabledBorder" Color="LightGray" ></SolidColorBrush>
+    <SolidColorBrush x:Key="ForegroundMandatory" Color="#FFFFCCE7"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushElementTitle" Color="#FF231F20"/>
+    <SolidColorBrush x:Key="BrushMandatory" Color="#FFFFCCE7" />
+    <SolidColorBrush x:Key="Brush8C" Color="#FF8C8C8C"/>
+    <!--common-->
+
+    <!--new button Brush-->
+    <FontFamily x:Key="Frutiger55Roman">./Fonts/#Frutiger55Roman</FontFamily>
+    <FontFamily x:Key="Frutiger45Light">./Fonts/#Frutiger45-Light</FontFamily>
+    <FontFamily x:Key="Frutiger65Bold">./Fonts/#Frutiger65</FontFamily>
+    <!--new button Brush-->
+
+</ResourceDictionary>
