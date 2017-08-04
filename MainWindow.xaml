@@ -1,0 +1,147 @@
+﻿<Window x:Class="Masters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Elements="clr-namespace:UIElements;assembly=UIElements"
+        Title="MainWindow" Name="UcMasterControl" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Masters;component/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Image x:Key="MyImage" Source="/Masters;component/Images/Additive.png"/>
+            <Image x:Key="MyImage1" Source="/Masters;component/Images/Additive-Child.png"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
+            BorderThickness="1"
+            BorderBrush="Black"
+            CornerRadius="3"> 
+        <StackPanel Orientation="Horizontal">
+              
+            
+        <TextBlock Text="contract :" FontSize="16" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5"></TextBlock>
+                
+        <Elements:NewComboBox Grid.Row="0" Grid.Column="1" Height="30" MinWidth="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5"
+                  ItemsSource="{Binding Path=Contract, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding Path=Dr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedValuePath="ID"
+                  DisplayMemberPath="TYPE">
+        </Elements:NewComboBox>
+        <TextBlock Text="Type :" FontSize="16" Grid.Row="0" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5"></TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="3" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" MinWidth="100" Margin="5"
+                
+                 Text="{Binding Path=Txttype, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"> </TextBox>
+                <StackPanel Grid.Row="0" Grid.Column="4" Orientation="Horizontal">
+                    <Button Height="20" 
+                            MinWidth="20" 
+                            VerticalAlignment="Top" 
+                            HorizontalAlignment="Left" 
+                            Margin="5" Click="GOButton_Click"
+                            ToolTip="GO"
+                            Content="{StaticResource MyImage}">
+                    </Button>
+                    <Button Height="20" 
+                            MinWidth="20" 
+                            Content="{StaticResource MyImage1}"
+                            VerticalAlignment="Top" 
+                            HorizontalAlignment="Left" 
+                            Margin="5" 
+                            ToolTip="GET"
+                            Click="GETButton_Click">
+                    </Button>
+                </StackPanel>
+       
+        </StackPanel>
+        </Border>
+        <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" 
+                  ItemsSource="{Binding Path=Dtdata, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="50">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Content="Edit" Height="25">
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="E" Width="20" Click="OnEdit_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="50">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Content="Delete" Height="25" >
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="D" Width="20" Click="OnDeleteClick"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="50">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Content="Sl." Height="25" >
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=SL_NO ,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="200">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Content="Service">
+                                
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="16"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="200">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Content="Group"></GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=CATEGORY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+            
+        </ListView>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="1" CornerRadius="3">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Elements:NewCheckBox                              
+                               Grid.Row="0" Grid.Column="0"
+                               IsChecked="{Binding Path=Ischek,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ElementName=UcMasterControl}"
+                               Click="PrintClick"
+                               Margin="5"
+                               Content="Print">
+                </Elements:NewCheckBox>
+                <Elements:NewButton Content="Save" HorizontalAlignment="Right" Margin="5" Click="Save_click"></Elements:NewButton>
+                <Elements:NewButton Content="Close" HorizontalAlignment="Right" Margin="5" Click="Close_click"></Elements:NewButton>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
