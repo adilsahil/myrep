@@ -1,0 +1,19 @@
+﻿<Window x:Class="Masters.UcReportViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:CrystalReport="clr-namespace:CrystalDecisions.Windows.Forms;assembly=CrystalDecisions.Windows.Forms"
+        xmlns:Integration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        Title="UcReportViewer">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Integration:WindowsFormsHost>
+            <CrystalReport:CrystalReportViewer  x:Name="MyReportViewer"></CrystalReport:CrystalReportViewer>
+        </Integration:WindowsFormsHost>
+    </Grid>
+</Window>
