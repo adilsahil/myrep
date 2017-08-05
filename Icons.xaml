@@ -1,0 +1,966 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"                >
+    
+    <!-- Application-->
+    <BitmapImage x:Key="ApplicationIcon"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Application/case.ico"></BitmapImage>
+    <BitmapImage x:Key="CompanyLogo"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Application/InfologicsKameda.png"></BitmapImage>
+    <BitmapImage x:Key="Yasasii"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Application/Yasasii.png"></BitmapImage>
+     <!-- Application-->
+    <!-- Common Image Resource Keys-->
+    <BitmapImage x:Key="Add"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Add.png"></BitmapImage>
+    <BitmapImage x:Key="Edit"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Edit.png"></BitmapImage>
+    <BitmapImage x:Key="Delete"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Delete.png"></BitmapImage>
+    <BitmapImage x:Key="View"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/View.png"></BitmapImage>
+    <BitmapImage x:Key="TextSearch"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/SearchText.png"></BitmapImage>
+    <BitmapImage x:Key="Tick"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Tick.png"></BitmapImage>
+    <BitmapImage x:Key="Close"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Close.png"></BitmapImage>
+    <BitmapImage x:Key="UpArrow"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/UpArrow.png"></BitmapImage>
+    <BitmapImage x:Key="DownArrow"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/DownArrow.png"></BitmapImage>
+    <BitmapImage x:Key="LeftArrow"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/LeftArrow.png"></BitmapImage>
+    <BitmapImage x:Key="RightArrow"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/RightArrow.png"></BitmapImage>
+    <BitmapImage x:Key="Refresh"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Refresh.png"></BitmapImage>
+    <BitmapImage x:Key="Remarks"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Remarks.png"></BitmapImage>
+    <BitmapImage x:Key="Male"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Male.png"></BitmapImage>
+    <BitmapImage x:Key="Female"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Female.png"></BitmapImage>
+    <BitmapImage x:Key="PediatricBoy"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/PediatricBoy.png"></BitmapImage>
+    <BitmapImage x:Key="PediatricGirl"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/PediatricGirl.png"></BitmapImage>
+    <BitmapImage x:Key="UnKnown"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/UnKnown.png"></BitmapImage>
+    <BitmapImage x:Key="Information"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Information.png"></BitmapImage>
+    <BitmapImage x:Key="InstructionsWithdata"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Instructions-with-data.png"></BitmapImage>
+    <BitmapImage x:Key="InstructionsWithoutdata"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Instructions-no-data.png"></BitmapImage>
+    <BitmapImage x:Key="Attachment"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Attachment.png"></BitmapImage>
+    <BitmapImage x:Key="RemoveAttachment"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/RemoveAttachment.png"></BitmapImage>
+    <BitmapImage x:Key="OP"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/OP.png"></BitmapImage>
+    <BitmapImage x:Key="IP"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/IP.png"></BitmapImage>
+    <BitmapImage x:Key="Emergency"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Emer.png"></BitmapImage>
+    <BitmapImage x:Key="Emer"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Emer.png"></BitmapImage>
+    <BitmapImage x:Key="IN"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/IN.png"></BitmapImage>
+    <BitmapImage x:Key="OUT"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/OUT.png"></BitmapImage>
+    <BitmapImage x:Key="Doctor"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Doctor.png"></BitmapImage>
+    <BitmapImage x:Key="Nurse"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Nurse.png"></BitmapImage>
+    <BitmapImage x:Key="NonMD"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/NonMD.png"></BitmapImage>
+    <BitmapImage x:Key="Print"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Print.png"></BitmapImage>
+    <BitmapImage x:Key="CPOEViewOrders"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/CPOEViewOrders.png"></BitmapImage>
+    <BitmapImage x:Key="ZoomIn"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/ZoomIn.png"></BitmapImage>
+    <BitmapImage x:Key="ZoomOut"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/ZoomOut.png"></BitmapImage>
+    <BitmapImage x:Key="Search"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Search.png"></BitmapImage>
+    <BitmapImage x:Key="Transparent"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Transparent.png"></BitmapImage>
+    <BitmapImage x:Key="Browse"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/BrowseFile.png"></BitmapImage>
+    <BitmapImage x:Key="SearchHistory"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/SearchHistory.png"></BitmapImage>
+    <BitmapImage x:Key="Calendar"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Calendar.png"></BitmapImage>
+    <BitmapImage x:Key="Calculator"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Calculator.png"></BitmapImage>
+    <BitmapImage x:Key="Collapse"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Calculator.png"></BitmapImage>
+    <BitmapImage x:Key="Expand"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Calculator.png"></BitmapImage>
+    <BitmapImage x:Key="WithoutData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/without_data.png"></BitmapImage>
+    <BitmapImage x:Key="HIS"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/his.ico"></BitmapImage>
+    <BitmapImage x:Key="Invalid"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Invalid.png"></BitmapImage>
+    <BitmapImage x:Key="Discount"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Discount.png"></BitmapImage>
+
+    <BitmapImage x:Key="MagnifySelected"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/MagnifySelectedArea.png"></BitmapImage>
+    <BitmapImage x:Key="AreaContrast"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/AreaContrast.png"></BitmapImage>
+    <BitmapImage x:Key="Contrast"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Contrast.png"></BitmapImage>
+    <BitmapImage x:Key="PanArrow"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Pan.png"></BitmapImage>
+    <BitmapImage x:Key="Measure"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Measure.png"></BitmapImage>
+    <BitmapImage x:Key="PanHand"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Hand.png"></BitmapImage>
+    <BitmapImage x:Key="Toggle"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Toggle.png"></BitmapImage>
+    <BitmapImage x:Key="ToggleGridImage"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/ToggleGridImage.png"></BitmapImage>
+    <BitmapImage x:Key="RotateRight"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/RotateRight.png"></BitmapImage>
+    <BitmapImage x:Key="RotateLeft"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/RotateLeft.png"></BitmapImage>
+    <BitmapImage x:Key="LogWithOutData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Log.png"></BitmapImage>
+    <BitmapImage x:Key="LogWithData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/LogWithoutData.png"></BitmapImage>
+    <BitmapImage x:Key="Queue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Queue.png"></BitmapImage>
+    <BitmapImage x:Key="Revoke"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Revoke.png"></BitmapImage>
+    <BitmapImage x:Key="Blood"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Blood.png"></BitmapImage>
+    <BitmapImage x:Key="ICDMapping"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/ICDMapping.png"></BitmapImage>
+    <BitmapImage x:Key="CCDAImport"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CCDA_Import.png"></BitmapImage>
+    <BitmapImage x:Key="Amendment"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Amendment.png"></BitmapImage>
+
+    <BitmapImage x:Key="ClinicalHorrizontalView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/ClinicalHorrizontalView.png"></BitmapImage>
+    <BitmapImage x:Key="ClinicalVerticalView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/ClinicalVerticalView.png"></BitmapImage>
+    <BitmapImage x:Key="MultiHospital"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/MultiHospital.png"></BitmapImage>
+    <BitmapImage x:Key="AdvanceDirective"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/AdvanceDirective.png"></BitmapImage>
+    <BitmapImage x:Key="FamilyMembers"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/FamilyMembers.png"></BitmapImage>
+    <BitmapImage x:Key="StartConsultation"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/StartCon.png"></BitmapImage>
+    <BitmapImage x:Key="CancelConsultation"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/CancelCon.png"></BitmapImage>
+    <!-- Common Image Resource Keys-->
+    
+    
+    
+    <!-- Media Controls Image Resource Keys-->
+    <BitmapImage x:Key="Play"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Play.png"></BitmapImage>
+    <BitmapImage x:Key="Pause"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Pause.png"></BitmapImage>
+    <BitmapImage x:Key="Rewind"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Rewind.png"></BitmapImage>
+    <BitmapImage x:Key="Stop"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Stop.png"></BitmapImage>
+    <BitmapImage x:Key="Next"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Next.png"></BitmapImage>
+   
+    <BitmapImage x:Key="Forward"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Forward.png"></BitmapImage>
+    <BitmapImage x:Key="BookMark"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/BookMark.ico"></BitmapImage>
+
+    <BitmapImage x:Key="Listen"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Listen.png"></BitmapImage>
+    <BitmapImage x:Key="Record"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Record.png"></BitmapImage>
+    <BitmapImage x:Key="Mute"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MediaControls/Mute.png"></BitmapImage>
+    <!-- Media Controls Image Resource Keys-->
+    
+    <!-- Search List Image Resource Keys-->
+    <BitmapImage x:Key="Authorized"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Authorized.png"></BitmapImage>
+    <BitmapImage x:Key="Biohazard"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Biohazard.png"></BitmapImage>
+    <BitmapImage x:Key="BreastFeeding"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Breast-Feeding.png"></BitmapImage>
+    <BitmapImage x:Key="Disability"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Disability.png"></BitmapImage>
+    <BitmapImage x:Key="ClinicalWarning"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/ClinicalWarning.png"></BitmapImage>
+    <BitmapImage x:Key="UnAuthorized"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/UnAuthorized.png"></BitmapImage>
+    <BitmapImage x:Key="FreeConsultation"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/FreeConsultation.png"></BitmapImage>
+    <BitmapImage x:Key="handover"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/handover.png"></BitmapImage>
+    <BitmapImage x:Key="HealthCheckup"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/HealthCheckup.png"></BitmapImage>
+    <BitmapImage x:Key="Infant"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Infant.png"></BitmapImage>
+    <BitmapImage x:Key="NoEMR"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/NoEMR.png"></BitmapImage>
+    <BitmapImage x:Key="NurseNote"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/NurseNote.png"></BitmapImage>
+    <BitmapImage x:Key="OldAge" 
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/old-age.png"></BitmapImage>
+    <BitmapImage x:Key="Pregnant"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Pregnant.png"></BitmapImage>
+    <BitmapImage x:Key="Referred"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Referred.png"></BitmapImage>
+    <BitmapImage x:Key="Warning"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Warning.png"></BitmapImage>
+    <BitmapImage x:Key="TokenCalling"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Patient-List-Token-calling.png"></BitmapImage>
+    <BitmapImage x:Key="PBMPending"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Pending.png"></BitmapImage>
+    <BitmapImage x:Key="PBMApproved"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Approved.png"></BitmapImage>
+    <BitmapImage x:Key="PBMRejected"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Rejected.png"></BitmapImage>
+    <BitmapImage x:Key="PBMWaiting"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Waiting.png"></BitmapImage>
+    
+
+    <!-- Search List Image Resource Keys-->
+    
+    <!-- Miscellaneous Image Resource Keys -->
+    <BitmapImage x:Key="AquaStar"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/AquaStar.png"></BitmapImage>
+    <BitmapImage x:Key="LightPinkStar"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/LightPinkStar.png"></BitmapImage>
+    <BitmapImage x:Key="WhiteStar"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/WhiteStar.png"></BitmapImage>
+    <BitmapImage x:Key="Login"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/Login.png"></BitmapImage>
+    <BitmapImage x:Key="Logout"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/Logout.png"></BitmapImage>
+    <BitmapImage x:Key="MoveDown"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/MoveDown.png"></BitmapImage>
+    <BitmapImage x:Key="MoveLeft"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/MoveLeft.png"></BitmapImage>
+    <BitmapImage x:Key="MoveRight"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/MoveRight.png"></BitmapImage>
+    <BitmapImage x:Key="MoveUP"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/MoveUP.png"></BitmapImage>
+    <BitmapImage x:Key="StickyNote"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/Sticky-Note.png"></BitmapImage>
+    <BitmapImage x:Key="StickyNoteWithData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/Sticky-NoteData.png"></BitmapImage>
+    <BitmapImage x:Key="Pin"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/StickyNote.png"></BitmapImage>
+    <!-- Miscellaneous Image Resource Keys -->
+    
+    <!-- EMR -->
+        <!--Pain Scale-->
+    <BitmapImage x:Key="Scale1"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/1.png"></BitmapImage>
+    <BitmapImage x:Key="Scale2"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/2.png"></BitmapImage>
+    <BitmapImage x:Key="Scale3"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/3.png"></BitmapImage>
+    <BitmapImage x:Key="Scale4"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/4.png"></BitmapImage>
+    <BitmapImage x:Key="Scale5"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/5.png"></BitmapImage>
+    <BitmapImage x:Key="Scale6"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Miscellaneous/6.png"></BitmapImage>
+        <!--Pain Scale-->
+    <!--Mallampatii Score-->
+    <BitmapImage x:Key="MallampatiiScore1"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Mallampatii/Score1.png"></BitmapImage>
+    <BitmapImage x:Key="MallampatiiScore2"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Mallampatii/Score2.png"></BitmapImage>
+    <BitmapImage x:Key="MallampatiiScore3"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Mallampatii/Score3.png"></BitmapImage>
+    <BitmapImage x:Key="MallampatiiScore4"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Mallampatii/Score4.png"></BitmapImage>
+    <!--Mallampatii Score-->
+    <!--Template Main Heading-->
+    <BitmapImage x:Key="Allergy"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/Allergy.png"></BitmapImage>
+    <BitmapImage x:Key="ChildDevelopment"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/child-development.png"></BitmapImage>
+    <BitmapImage x:Key="DP"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/DP.png"></BitmapImage>
+    <BitmapImage x:Key="Followup"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/FN.png"></BitmapImage>
+    <BitmapImage x:Key="HPI"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/HPI.png"></BitmapImage>
+    <BitmapImage x:Key="PE"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/PE.png"></BitmapImage>
+    <BitmapImage x:Key="PH"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/PH.png"></BitmapImage>
+    <BitmapImage x:Key="Reference"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/Reference.png"></BitmapImage>
+    <BitmapImage x:Key="ROS"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/ROS.png"></BitmapImage>
+    <BitmapImage x:Key="Triage"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/Triage.png"></BitmapImage>
+    <BitmapImage x:Key="Vitals"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/Vitals.png"></BitmapImage>
+    <BitmapImage x:Key="Insertion"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TemplateHeadings/Insertion.png"></BitmapImage>
+
+    <!--Template Main Heading-->
+        <!-- Medicine Administration Status-->
+    <BitmapImage x:Key="Administrated"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Administrated.png"></BitmapImage>
+    <BitmapImage x:Key="AdministrationError"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/AdministrationError.png"></BitmapImage>
+    <BitmapImage x:Key="Discontinued"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Discontinued.png"></BitmapImage>
+    <BitmapImage x:Key="DrugFreeInterval"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/DrugFreeInterval.png"></BitmapImage>
+    <BitmapImage x:Key="DrugUnavailable"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/DrugUnavailable.png"></BitmapImage>
+    <BitmapImage x:Key="End"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/End.png"></BitmapImage>
+    <BitmapImage x:Key="Edited"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Edited.png"></BitmapImage>
+    <BitmapImage x:Key="GivenEarly"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/GivenEarly.png"></BitmapImage>
+    <BitmapImage x:Key="GivenLate"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/GivenLate.png"></BitmapImage>
+    <BitmapImage x:Key="NilByMouth"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/NilByMouth.png"></BitmapImage>
+    <BitmapImage x:Key="OtherClinicalReason"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/OtherClinicalReason.png"></BitmapImage>
+    <BitmapImage x:Key="PatientAbsent"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/PatientAbsent.png"></BitmapImage>
+    <BitmapImage x:Key="PatientRefused"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/PatientRefused.png"></BitmapImage>
+    <BitmapImage x:Key="Pending"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Pending.png"></BitmapImage>
+    <BitmapImage x:Key="SelfAdministration"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/SelfAdministration.png"></BitmapImage>
+    <BitmapImage x:Key="Started"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Started.png"></BitmapImage>
+    <BitmapImage x:Key="Unknown"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Unknown.png"></BitmapImage>
+    <BitmapImage x:Key="Restart"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Restart.png"></BitmapImage>
+    <BitmapImage x:Key="Continue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Continue.png"></BitmapImage>
+    <BitmapImage x:Key="AdminStop"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/AdminStop.png"></BitmapImage>
+    <BitmapImage x:Key="AdminVerify"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/AdminVerify.png"></BitmapImage>
+
+    <BitmapImage x:Key="SecondNurseVerification"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Second_nurse_verification.png"></BitmapImage>
+    <BitmapImage x:Key="SecondNurseVerificationCancel"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Second_nurse_verification_cancel.png"></BitmapImage>
+    <BitmapImage x:Key="MedAdminTaskExecuted"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/MedAdmin_Task_Executed.png"></BitmapImage>
+    <BitmapImage x:Key="MedAdminTaskPending"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/MedAdminTask_Pending.png"></BitmapImage>
+    <BitmapImage x:Key="MedAdminTask"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/MedAdmin_Task.png"></BitmapImage>
+
+    <!-- Medicine Administration Status in CPOE View-->
+    <BitmapImage x:Key="SecondNurseVerificationDone"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Second_nurse_verification.png"></BitmapImage>
+    <BitmapImage x:Key="SecondNurseVerificationRequired"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Second_nurse_verification_cancel.png"></BitmapImage>
+    <BitmapImage x:Key="PharmacistVerificationPending"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Pharmacist_Verification_Pending.png"></BitmapImage>
+    <BitmapImage x:Key="PharmacistVerified"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Pharmacist_Verified.png"></BitmapImage>
+    <BitmapImage x:Key="DoctorVerificationPending"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/DoctorVerificationPending.png"></BitmapImage>
+    <BitmapImage x:Key="DoctorVerified"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/DoctorVerified.png"></BitmapImage>
+    <BitmapImage x:Key="NotifyDoctor"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/NotifyDoctor.png"></BitmapImage>
+
+    <!-- Medicine Administration Status in CPOE View-->
+
+    <!-- Medicine Administration Status-->
+
+    <!--Medicine Reconcilation -->
+    <BitmapImage x:Key="Rx_Discontinued"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Discontinued.png"></BitmapImage>
+    <BitmapImage x:Key="Discontinue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Discontinue.png"></BitmapImage>
+    <BitmapImage x:Key="FuturePrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Future_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="LongTerm"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/LongTerm_Medications.png"></BitmapImage>
+    <BitmapImage x:Key="Prior"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Prior_Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="OngoingMedication"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/OngoingMedication.png"></BitmapImage>
+    <BitmapImage x:Key="DiscontinuedMedication"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/DiscontinuedMedication.PNG"></BitmapImage>
+    <BitmapImage x:Key="PastMedication"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/PastMedication.PNG"></BitmapImage>
+    <BitmapImage x:Key="CurrentIP"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Cur_IP.png"></BitmapImage>
+    <BitmapImage x:Key="ReconcileMyDeptPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_My_Dept_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="ReconcileMyPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_My_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="ReconcileOutsideHospitalPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_Outside_Hospital_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="Reconcile_Outside_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_Outside_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="ReconcileMyDept_IP_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_My_Dept_IP_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="ReconcileMy_IP_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_My_IP_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="Reconcile_Outside_IP_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Reconcile_Outside_IP_Prescription.PNG"></BitmapImage>
+    <BitmapImage x:Key="Reconcile_Home_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Home_Medication.png"></BitmapImage>
+    <BitmapImage x:Key="Reconcile_Home_IP_Prescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Home_IP_Medication.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_Emer_Default"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Emer_Default.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_Emer_Discontinued"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Emer_Discontinued.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_Emer_Moved"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Emer_Moved.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_IP_Default"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_IP_Default.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_IP_Discontinued"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_IP_Discontinued.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_IP_Moved"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_IP_Moved.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_Moved"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Moved.png"></BitmapImage>
+    <BitmapImage x:Key="Rx_Normal"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Rx_Normal.png"></BitmapImage>
+    <BitmapImage x:Key="AdministrationStarted"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Administration_started_ medication.png"></BitmapImage>
+    <BitmapImage x:Key="AdministrationEnded"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Administration_Ended_Medication.png"></BitmapImage>
+    <BitmapImage x:Key="SlidingScale"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/SlidingScale.png"></BitmapImage>
+    <BitmapImage x:Key="ReconcilliationCurrentEpisode"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/ReconcilliationCurrentEpisode.png"></BitmapImage>
+
+    <!--Medicine Reconcilation -->
+    
+    <!-- CPOE-->
+    <BitmapImage x:Key="All"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/All.png"></BitmapImage>
+    <BitmapImage x:Key="Diet"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Diet.png"></BitmapImage>
+    <BitmapImage x:Key="Investigations"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Investigations.png"></BitmapImage>
+    <BitmapImage x:Key="Medicine"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Medicine.png"></BitmapImage>
+    <BitmapImage x:Key="Oncology"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Oncology.png"></BitmapImage>
+    <BitmapImage x:Key="Others"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Others.png"></BitmapImage>
+    <BitmapImage x:Key="Procedures"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Procedures.png"></BitmapImage>
+    <BitmapImage x:Key="Radiology"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Radiology.png"></BitmapImage>
+    <BitmapImage x:Key="Surgical"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Surgical.png"></BitmapImage>
+    <BitmapImage x:Key="Nursing"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Nursing.png"></BitmapImage>
+    <BitmapImage x:Key="HL7InformationButton"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/HL7informationButton.png"></BitmapImage>
+
+    <!-- CPOE Medicine-->
+    <BitmapImage x:Key="DischargeOrder"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineReconcile/Discharge_Medication.png"></BitmapImage>
+    <BitmapImage x:Key="STATOrder"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/PanicValue.png"></BitmapImage>
+    <BitmapImage x:Key="PharmacyUrgentOrder"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/PriorityUrgent.png"></BitmapImage>
+    <BitmapImage x:Key="AddToFavorite"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Add-to-favorite.png"></BitmapImage>
+    <BitmapImage x:Key="AddToOrderSet"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Add-to-order-set.png"></BitmapImage>
+    <BitmapImage x:Key="Brand"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Brand.png"></BitmapImage>
+    <BitmapImage x:Key="NonFormulary"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/NonFormulary.png"></BitmapImage>
+    <BitmapImage x:Key="HospitalPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Hospital_Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="MyPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/My_Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="OutsidePrescription"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Outside_Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="HomePrescription"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Home_Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="TemplateWithData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Template-with-data.png"></BitmapImage>
+    <BitmapImage x:Key="TemplateWithoutData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Template-without-data.png"></BitmapImage>
+    <BitmapImage x:Key="DoctorRemarks"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Remarks.png"></BitmapImage>
+    <BitmapImage x:Key="ServiceRemarks"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Common/Remarks.png"></BitmapImage>
+    <BitmapImage x:Key="PendingReview"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/PendingReview.png"></BitmapImage>
+    <BitmapImage x:Key="Completed"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Completed.PNG"></BitmapImage>
+    <BitmapImage x:Key="Reported"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Reported.PNG"></BitmapImage>
+    <BitmapImage x:Key="OTScheduleView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/OTScheduleView.PNG"></BitmapImage>
+    <BitmapImage x:Key="OTRegisterView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/OTRegisterView.png"></BitmapImage>
+    <BitmapImage x:Key="DiagnosisView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DiagnosisView.png"></BitmapImage>
+    <BitmapImage x:Key="MedicoLegalCaseView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicoLegalCaseView.png"></BitmapImage>
+    <BitmapImage x:Key="TraumaView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/TraumaView.png"></BitmapImage>
+    <BitmapImage x:Key="PaceMakerView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/PaceMakerView.png"></BitmapImage>
+    <BitmapImage x:Key="RadiologyModality"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Radioilogy-big.png"></BitmapImage>
+
+    <BitmapImage x:Key="ExcludedService"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/ExcludedService.png"></BitmapImage>
+
+    <BitmapImage x:Key="PreApprovalRequiredService"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/PreApprovalRequiredService.png"></BitmapImage>
+    <BitmapImage x:Key="TelephonicOrder"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Telephonic_order.png"></BitmapImage>
+    <BitmapImage x:Key="VerbalOrder"    
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Verbal_order.png"></BitmapImage>
+    <BitmapImage x:Key="CPOEAdmissionOrder"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/AdmissionOrder.png"></BitmapImage>
+    <BitmapImage x:Key="CPOEAdmissionOrder1"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Admission_Order1.png"></BitmapImage>
+    <BitmapImage x:Key="Consumable"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Consumable.png"></BitmapImage>
+    <BitmapImage x:Key="NANDA"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/NANDA.png"></BitmapImage>
+    <BitmapImage x:Key="EPrescription"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/E-Prescription.png"></BitmapImage>
+    <BitmapImage x:Key="EPrescriptionCancel"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/E-PrescriptionCancel.png"></BitmapImage>
+    <BitmapImage x:Key="AuthorizedByDoctor"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Authorized.png"></BitmapImage>
+    <BitmapImage x:Key="NotAuthorizedByDoctor"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/UnAuthorized.png"></BitmapImage>
+
+    <BitmapImage x:Key="EMRIntervensionAdded"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedIntervension_Added.png"></BitmapImage>
+    <BitmapImage x:Key="EMRIntervensionActionRequired"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedIntervension_ActionRequired.png"></BitmapImage>
+    <BitmapImage x:Key="EMRIntervensionDocumented"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedIntervension_DocCompleted.png"></BitmapImage>
+    <BitmapImage x:Key="EMRAdditive"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Additive.png"></BitmapImage>
+
+    <BitmapImage x:Key="EMRAdditive-Child"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Additive-Child.png"></BitmapImage>
+
+    <!-- EMR -->
+    
+    <!-- Investigation -->
+    <BitmapImage x:Key="AbnormalResult"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/Abnormal.png"></BitmapImage>
+    <BitmapImage x:Key="PanicValue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/PanicValue.png"></BitmapImage>
+    <BitmapImage x:Key="WithinRange"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/Withintherange.png"></BitmapImage>
+    <BitmapImage x:Key="Result"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/Result.png"></BitmapImage>
+    <BitmapImage x:Key="NoPreviousResults"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/View-previous-results-no-data.png"></BitmapImage>
+    <BitmapImage x:Key="PreviousResults"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/View-previous-results-with-data.png"></BitmapImage>
+    <BitmapImage x:Key="Panels"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/Panels.png"></BitmapImage>
+    <BitmapImage x:Key="FirstLevelAuthorized"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/FirstLevelAuth.png"></BitmapImage>
+    <BitmapImage x:Key="SecondLevelAuthorized"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/SecondLevelAuth.png"></BitmapImage>
+    <BitmapImage x:Key="PartiallyAuthorized"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/PartiallyAuthorized.png"></BitmapImage>
+    <BitmapImage x:Key="NotACpoe"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/NotACpoe.jpg"></BitmapImage>
+    <BitmapImage x:Key="InvResultEntered"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/InvestigationsResult.png"></BitmapImage>
+    <BitmapImage x:Key="RadResultEntered"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/RadiologyResult.png"></BitmapImage>
+    <BitmapImage x:Key="StatOrder"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/STAT-Order.png"></BitmapImage>
+    <BitmapImage x:Key="ViewComments"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/ViewComments.png"></BitmapImage>
+    <BitmapImage x:Key="TATExceed"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/TATExceed.png"></BitmapImage>
+    <BitmapImage x:Key="PanelCollapsed"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/PanelCollapsed.png"></BitmapImage>
+    <BitmapImage x:Key="PanelExpanded"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/Panels.png"></BitmapImage>
+    <BitmapImage x:Key="PendingFuture"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Investigation/PendingFuture.png"></BitmapImage>
+
+    <!-- Investigation -->
+    
+    
+    <!-- ADT-->
+    <BitmapImage x:Key="ShowPopup"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/ShowPopup.png"></BitmapImage>
+
+    <BitmapImage x:Key="Tree"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/Tree.png"></BitmapImage>
+
+    <BitmapImage x:Key="HoldTransfer"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/HoldTransfer.png"></BitmapImage>
+    <BitmapImage x:Key="BedTransfer"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/BedTransfer.png"></BitmapImage>
+    <BitmapImage x:Key="BedHoldRelease"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/bedholdrelease.png"></BitmapImage>
+    <BitmapImage x:Key="Room"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/Room.png"></BitmapImage>
+    <BitmapImage x:Key="Ward"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/Ward.png"></BitmapImage>
+    <!-- ADT-->
+
+    <!-- FO & Billing-->
+    <BitmapImage x:Key="Release"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/ADT/Release.png"></BitmapImage>
+    <BitmapImage x:Key="BrandMedicallyNecessary"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/BrandMedicallyNecessary.png"></BitmapImage>
+    <BitmapImage x:Key="Billing"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Billing.png"></BitmapImage>
+    <!-- FO & Billing-->
+    <!-- Final Billing-->
+    <BitmapImage x:Key="BadDebit"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/BadDebit.png"></BitmapImage>
+    <BitmapImage x:Key="Cancelled"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/Canceled.png"></BitmapImage>
+    <BitmapImage x:Key="Partial"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/Partial.png"></BitmapImage>
+    <BitmapImage x:Key="PendingBill"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/Pending.png"></BitmapImage>
+    <BitmapImage x:Key="ReSubmit"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/ReSubmit.png"></BitmapImage>
+    <BitmapImage x:Key="Save"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/Save.png"></BitmapImage>
+    <BitmapImage x:Key="SendClaimToPatient"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/SendClaimtoPatient.png"></BitmapImage>
+    <BitmapImage x:Key="Settlement"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/Settlement.png"></BitmapImage>
+    <BitmapImage x:Key="SendToClaimCompany"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FinalBilling/SentToClaimCompany.png"></BitmapImage>
+
+    <BitmapImage x:Key="Referral"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Reference.png"></BitmapImage>
+    <BitmapImage x:Key="Scanner"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Scanner.png"></BitmapImage>
+
+
+    <BitmapImage x:Key="Copay"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Copay.png"></BitmapImage>
+    <BitmapImage x:Key="Details"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Details.png"></BitmapImage>
+    <BitmapImage x:Key="ReNew"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Renew.png"></BitmapImage>
+
+    <BitmapImage x:Key="Adjustments"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Adjustments.png"></BitmapImage>
+    <BitmapImage x:Key="Tobecollected"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/FO/Tobecollected.png"></BitmapImage>
+    <!-- Final Billing-->
+    
+
+    <!-- MIS-->
+    <BitmapImage x:Key="Chart"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MIS/chart.gif"></BitmapImage>
+    <BitmapImage x:Key="Check"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MIS/Check.png"></BitmapImage>
+    <BitmapImage x:Key="Cross"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MIS/Cross.png"></BitmapImage>
+    <BitmapImage x:Key="Grid"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MIS/grid.gif"></BitmapImage>
+    <!--<BitmapImage x:Key="Search"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/MIS/Search.png"></BitmapImage>-->
+     <!-- MIS-->
+
+    <!-- Dashboard-->
+    <BitmapImage x:Key="CPOE"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/CPOE.png"></BitmapImage>
+    <BitmapImage x:Key="DischargeSummary"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/DischargeSummary.png"></BitmapImage>
+    <BitmapImage x:Key="Home"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/Home.png"></BitmapImage>
+    <BitmapImage x:Key="Lock"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/Lock.png"></BitmapImage>
+    <BitmapImage x:Key="NursesNote"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/NursesNote.png"></BitmapImage>
+    <BitmapImage x:Key="PreviewAndSave"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/PreviewAndSave.png"></BitmapImage>
+    <BitmapImage x:Key="PreviewScan"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/PreviewScan.png"></BitmapImage>
+    <BitmapImage x:Key="PreviewScanWithData"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/PreviewScanWithData.png"></BitmapImage>
+
+    <!--<BitmapImage x:Key="Radiology"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/Radiology.png"></BitmapImage>-->
+    <BitmapImage x:Key="Reset"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/Reset.png"></BitmapImage>
+    <BitmapImage x:Key="SwappingList"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/SwappingList.png"></BitmapImage>
+    <BitmapImage x:Key="Template"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/Template.png"></BitmapImage>
+    <BitmapImage x:Key="ViewCPOE"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/viewCPOE.png"></BitmapImage>
+    <BitmapImage x:Key="CEEDWG"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/DashBoard/CEEDWG.png"></BitmapImage>   
+    <!-- Dashboard-->
+
+    <!--USER MANAGEMENT-->
+    <BitmapImage x:Key="SingleLeft"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/UM/LeftSingle.png"></BitmapImage>
+    <BitmapImage x:Key="SingleRight"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/UM/RightSingle.png"></BitmapImage>
+    <BitmapImage x:Key="MultipleLeft"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/UM/MultipleLeft.png"></BitmapImage>
+    <BitmapImage x:Key="MultipleRight"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/UM/MultipleRight.png"></BitmapImage>
+    <!--USER MANAGEMENT-->
+
+
+    <!-- Bed Allocation-->
+
+    <BitmapImage x:Key="OccupiedBed"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/BedAllocation/Occupied.png"></BitmapImage>
+    <BitmapImage x:Key="VacantBed"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/BedAllocation/Vacant.png"></BitmapImage>
+    <BitmapImage x:Key="HospitalFloor"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/BedAllocation/hospital_floor.jpg"></BitmapImage>
+    <!--BLOOD BANK-->
+    <BitmapImage x:Key="BloodIssue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/IssueBloodBag.png"></BitmapImage>
+    <BitmapImage x:Key="BloodIssueReturn"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/IssueReturnNursingStationToBB.png"></BitmapImage>
+    <BitmapImage x:Key="BloodReceive"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/ReceiveBloodBag.png"></BitmapImage>
+    <BitmapImage x:Key="BloodTransfusion"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/BloodTransfusion.png"></BitmapImage>
+    <BitmapImage x:Key="BloodRemoveReturn"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/RemoveBagFromStock.png"></BitmapImage>
+
+    <BitmapImage x:Key="IssueBloodBag_1"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/IssueBloodBag_1.png"></BitmapImage>
+
+    <BitmapImage x:Key="IssueReturnNursingStationToBB_1"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/IssueReturnNursingStationToBB_1.png"></BitmapImage>
+
+    <BitmapImage x:Key="ReceiveBloodBag.png"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/IssueReturnNursingStationToBB_1.png"></BitmapImage>
+
+
+    <BitmapImage x:Key="BloodTransfusionPriority"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/BloodTransfusionPriority.png"></BitmapImage>
+
+    <BitmapImage x:Key="ChangeStorageLocation"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/ChangeStorageLocation.png"></BitmapImage>
+
+    <BitmapImage x:Key="ExternalSampleRejection"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/ExternalSampleRejection.png"></BitmapImage>
+
+    <BitmapImage x:Key="ViewBloodIssue"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Bloodbank/ViewBloodIssue.png"></BitmapImage>
+    <!-- OT-->
+
+    <BitmapImage x:Key="PreferenceCardUsage"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/OR/PreferenceCardUsage.png"></BitmapImage>
+
+    <BitmapImage x:Key="ORScheduleView"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/OR/ORScheduleView.png"></BitmapImage>
+
+
+
+    <!-- Bed Allocation-->
+    
+   
+    
+    <!-- Intraoperative vital  -->
+
+    <BitmapImage x:Key="IOVTemperature"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/EMR/IntraOperativeVitalChart/Temperature.png"></BitmapImage>
+
+    <!-- Intraoperative vital  -->
+
+    <!-- CSSD-->
+    <BitmapImage x:Key="CSSDProcessing"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CSSDProcessing.png"></BitmapImage>
+    <BitmapImage x:Key="CSSDCleaning"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CssdCleaning.png"></BitmapImage>
+    <BitmapImage x:Key="CSSDPacking"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CssdPacking.png"></BitmapImage>
+    <BitmapImage x:Key="CSSDDispatch"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CssdDispatch.png"></BitmapImage>
+    <BitmapImage x:Key="CSSDRackAllocation"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CssdRackAllocation.png"></BitmapImage>
+    <BitmapImage x:Key="CSSDReceive"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CSSDReceive.png"></BitmapImage>
+
+    <BitmapImage x:Key="CssdSending"
+                 UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/CSSD/CssdSending.png"></BitmapImage>
+    <!-- CSSD-->
+
+    <!--String Array-->
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="DefaultBaseCategoryImagePath">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Investigations.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Procedures.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Radiology.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Others.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/Medicine.png</sys:String>
+        <!--new images 5 to -->
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/nursing.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/oncology.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/diet.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/surgical.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/CPOE/all.png</sys:String>
+    </x:Array>
+    <!--String Array-->
+
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="DefaultPatientImagePath">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/Common/Male.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/Common/Female.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/Common/UnKnown.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/Common/PediatricBoy.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/Common/PediatricGirl.png</sys:String>
+    </x:Array>
+
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="PatientEMRStatusImagePath">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/NoEMR.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/UnAuthorized.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Authorized.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/NurseNote.png</sys:String>
+
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="PBMStatusImagePath">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Pending.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Approved.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Rejected.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/PBM_Waiting.png</sys:String>
+
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="PatientPhysicalStatus">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/Infant.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/old-age.png</sys:String>
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="ConsultationTypeImage">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/FreeConsultation.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/HealthCheckup.png</sys:String>
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="OTStatusImage">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/NoEMR.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/not_billed.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/partially_billed.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/SearchList/completely_billed.png</sys:String>
+
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="BloodAdminStatusImages">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Started.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Continue.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Restart.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Discontinued.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/End.png</sys:String>
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="MedicineAdminStatusImages">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Restart.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Continue.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Started.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/AdministrationError.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/PatientRefused.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/Discontinued.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/End.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/AdminStop.png</sys:String>
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="KOTTubeFeedAdminStatusImages">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/GivenEarly.png</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/MedicineAministration/GivenLate.png</sys:String>
+    </x:Array>
+    <x:Array Type="{x:Type sys:String}"
+             x:Key="FOAppointmentStatusImages">
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/PendingReview.PNG</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Reported.PNG</sys:String>
+        <sys:String>/Infologics.Medilogics.Resources.Images;component/Icons/EMR/Completed.PNG</sys:String>
+    </x:Array>
+
+<!-- Insurance -->
+    <BitmapImage x:Key="Plan_Details_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20-plan_details-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Plan_Details"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20-plan_details.png"></BitmapImage>
+    <BitmapImage x:Key="Rules_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20-rules2-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Rules"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20-rules2.png"></BitmapImage>
+    <BitmapImage x:Key="Category_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_category-saturation75.png"></BitmapImage>
+    <BitmapImage x:Key="Category"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_category.png"></BitmapImage>
+    <BitmapImage x:Key="Copay1"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_co-pay1-blue.png"></BitmapImage>
+    <BitmapImage x:Key="Copay1_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_co-pay1-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Contract_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_contract2-saturation75.png"></BitmapImage>
+    <BitmapImage x:Key="Contract"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_contract2.png"></BitmapImage>
+    <BitmapImage x:Key="CopyPlans_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_copy_plans-sat.png"></BitmapImage>
+    <BitmapImage x:Key="CopyPlans"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_copy_plans.png"></BitmapImage>
+    <BitmapImage x:Key="Copy2"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_copy2-blue.png"></BitmapImage>
+    <BitmapImage x:Key="Copy2_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_copy2-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Exclusion"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_exclusion.png"></BitmapImage>
+    <BitmapImage x:Key="Exclusion_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_exclusion_saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Mandatory_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_mandatory-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Mandatory"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_mandatory.png"></BitmapImage>
+    <BitmapImage x:Key="PlanDetails_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_plandetails-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="PlanDetails"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_plandetails.png"></BitmapImage>
+    <BitmapImage x:Key="Tariff_Sat"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_tariff-saturation.png"></BitmapImage>
+    <BitmapImage x:Key="Tariff"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/20_tariff.png"></BitmapImage>
+    <BitmapImage x:Key="ServiceExecuted"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/Service_Executed.png"></BitmapImage>
+    <BitmapImage x:Key="ServicePending"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/Service_Pending.png"></BitmapImage>
+    <!-- Insurance -->
+    <!-- Package -->
+    <BitmapImage x:Key="Package"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/Package.png"></BitmapImage>
+    <!-- Insurance -->
+    <BitmapImage x:Key="TopUp"
+             UriSource="/Infologics.Medilogics.Resources.Images;component/Icons/Insurance/Top_Up.png"></BitmapImage>
+</ResourceDictionary>

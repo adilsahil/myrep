@@ -1,0 +1,536 @@
+﻿<UserControl x:Class="Infologics.Medilogics.Billing.UIContainer.Billing.UIServiceDelivery"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:UIControls="clr-namespace:Infologics.Medilogics.Billing.UIControls.Billing;assembly=Infologics.Medilogics.Billing.UIControls"
+             xmlns:UIElements="clr-namespace:Infologics.Medilogics.Resources.UIElementsLib;assembly=Infologics.Medilogics.Resources.UIElementsLib"
+             xmlns:BillCommand="clr-namespace:Infologics.Medilogics.Billing.UIControls.BillingNew.Command;assembly=Infologics.Medilogics.Billing.UIControls"
+             xmlns:Commands="clr-namespace:Infologics.Medilogics.CommonSharedUI.Commands;assembly=Infologics.Medilogics.CommonSharedUI"
+             Loaded="UIServiceDelivery_Loaded">
+    <UserControl.CommandBindings>       
+        <CommandBinding Command="BillCommand:BillingCommands.AddService"
+                        Executed="Executed_AddService"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.LoadAdjustment"
+                        Executed="Executed_LoadAdjustment"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.QtySelectionChange"
+                        Executed="Executed_QtySelectionChange"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.ServiceDelete"
+                        Executed="Executed_ServiceDelete"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMROrderLoad"
+                        Executed="Executed_EMROrderLoad"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMROrderSelection"
+                        Executed="Executed_EMROrderSelection"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.OtherCharge"
+                        Executed="Executed_OtherCharge"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EpisodePopUP"
+                        Executed="Executed_EpisodePopUP"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EditService"
+                        Executed="Executed_EditService"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.IsVerificationChecked"
+                        Executed="Executed_IsVerificationChecked"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.IsSaveChecked"
+                        Executed="Executed_IsSaveChecked"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EncounterPopUP"
+                        Executed="Executed_EncounterPopUP"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.CommonSaleClick"
+                        Executed="Executed_CommonSaleClick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.CommonVerificationClick"
+                        Executed="Executed_CommonVerificationClick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.OutSideProviderHospital"
+                        Executed="Executed_OutSideProviderHospital"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuViewDrugInfo"
+                        Executed="Executed_menuViewDrugInfo"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuOrderInfo"
+                        Executed="Executed_menuOrderInfo"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuMARView"
+                        Executed="Executed_menuMARView"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuIntervention"
+                        Executed="Executed_menuIntervention"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuHold"
+                        Executed="Executed_menuHold"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.menuPharmacyEducation"
+                        Executed="Executed_menuPharmacyEducation"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.MenuIssueRemark"
+                        Executed="Executed_MenuIssueRemark"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EditPharmacy_Click"
+                        Executed="Executed_EditPharmacy_Click"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.GridBatchSelectionChanged"
+                        Executed="Executed_GridBatchSelectionChanged"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PharmacyNote"
+                        Executed="Executed_PharmacyNote"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.SerivceDetails"
+                        Executed="Executed_SerivceDetails"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.RefreshItemList"
+                        Executed="Executed_RefreshItemList"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnScan_click"
+                        Executed="Executed_btnScanclick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnServiceScan_click"
+                        Executed="Executed_btnServiceScanclick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PharmacyUnitSalesChaneged"
+                        Executed="Executed_PharmacyUnitSalesChaneged"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMROrderSelectALL"
+                        Executed="Executed_EMROrderSelectALL"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMROrderUnSelectALL"
+                        Executed="Executed_EMROrderUnSelectALL"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMRRootChecked"
+                        Executed="Executed_EMRRootChecked"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EpisodeMousebtnClick"
+                        Executed="Executed_EpisodeMousebtnClick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.OrderView"
+                        Executed="Executed_OrderView"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.AllergyReason"
+                        Executed="Executed_AllergyReason"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.ExcltoIncl"
+                        Executed="Executed_ExcltoIncl"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.IncltoExcl"
+                        Executed="Executed_IncltoExcl"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.Needtoself"
+                        Executed="Executed_Needtoself"></CommandBinding>
+
+        <!--<CommandBinding Command="BillCommand:BillingCommands.ApprovalToSelf"
+                        Executed="Executed_ApprovalToSelf"></CommandBinding>-->
+        
+        <CommandBinding Command="BillCommand:BillingCommands.WaitingtoSelf"
+                        Executed="Executed_WaitingtoSelf"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.SchemeDetails"
+                        Executed="Executed_SchemeDetails"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PrintPrescription"
+                        Executed="Executed_PrintPrescription"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PrevMedication"
+                        Executed="Executed_PrevMedication"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.NeedToIncl"
+                        Executed="Executed_NeedToIncl"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.WaitToIncl"
+                        Executed="Executed_WaitToIncl"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.LabelClick"
+                        Executed="Executed_LabelClick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.BarcodeWiseSearch"
+                        Executed="Executed_BarcodeWiseSearch" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.EMRBarcodeWiseSearch"
+                        Executed="Executed_EMRBarcodeWiseSearch" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.ChangetoZeroCharge"
+                        Executed="Executed_ChangetoZeroCharge" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.AllServiceDelete"
+                        Executed="Executed_AllServiceDelete" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.NonEncounterICD"   
+                        Executed="OnNonEncounterICD_Executed"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnRemoveService"
+                        Executed="Executed_RemoveService" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnAddRemovedService"
+                        Executed="Executed_AddRemovedService" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnInternalExternalClick"
+                        Executed="Executed_btnInternalExternalClick" ></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.CopayAndDeductible"   
+                        Executed="OnCopayAndDeductible_Click"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PharmacyLabelPrinting"   
+                        Executed="PharmacyLabelPrinting_Click"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.PharmacistRemarkorComment"   
+                        Executed="PharmacistRemarkorComment_Click"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.VerificationCancel"   
+                        Executed="VerificationCancel_Click"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.ChangeSublocation"
+                        Executed="Executed_ChangeSublocation"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.btnAddTopUp_Click"
+                        Executed="Executed_btnAddTopUpClick"></CommandBinding>
+        <CommandBinding Command="BillCommand:BillingCommands.VerifiedMedication"
+                        Executed="Executed_VerifiedMedication"></CommandBinding>
+    </UserControl.CommandBindings>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Controls/TabControl.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Resources/Brushes.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Resources/Fonts.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Resources/IconButton.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Controls/Separator.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Controls/Button.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Resources/ColorTheme.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.StyleResources;component/Controls/ComboBox.xaml" />
+                <ResourceDictionary Source="/Infologics.Medilogics.Resources.Images;component/Resource/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <CommandBinding x:Key="SelectOpenEpisode"
+                        Command="Commands:Commands.PatientEpisodeOk"
+                        Executed="CmdOpenEpisodeOk_Executed"></CommandBinding>
+            <CommandBinding x:Key="CloseAllergyRemarkPopup" Command="BillCommand:BillingCommands.CloseAllergyRemarkPopup"
+                        Executed="Executed_CloseAllergyRemarkPopup"></CommandBinding>
+            <CommandBinding x:Key="CancelAllergyRemarkPopup" Command="BillCommand:BillingCommands.CancelAllergyRemarkPopup"
+                        Executed="Executed_CancelAllergyRemarkPopup"></CommandBinding>
+            
+        </ResourceDictionary>       
+    </UserControl.Resources>
+    <Border CornerRadius="1"
+            Margin="1"
+            HorizontalAlignment="Stretch"
+            BorderBrush="Black"
+            BorderThickness="2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>           
+            <UIControls:UIServiceEpisodeProvider Grid.Row="0" Name="uiServiceEpisodeProvider">
+            </UIControls:UIServiceEpisodeProvider>
+                <Border Margin="2" 
+                Grid.Row="1"
+                BorderThickness="1" 
+                BorderBrush="LightGray">
+                    <TabControl Name="TabServiceType" Style="{StaticResource TabStyle}" 
+                        Grid.Row="1" SelectionChanged="tblServiceType_SelectionChanged">
+                        <TabItem Name="tabServiceOrder" 
+                        Header="Service Orders">
+                            <TabItem.Style>
+                                <Style BasedOn="{StaticResource TabItemStyle}" TargetType="{x:Type TabItem}">
+                                <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=HasServicePrivilege}" Value="true" >
+                                            <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                        </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsFromPharmacyPanel}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsCafeteriaBillingForIP}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsEnableCafeteriaTab}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers> 
+                            </Style>
+                            </TabItem.Style>
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition  Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.Style>
+                                    <Style>
+                                        <Setter Property="Grid.Visibility" Value="Visible"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsServiceOrdersVisible}" Value="false">
+                                                <Setter Property="Grid.Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                            <Expander Grid.Row="0"
+                                      Grid.Column="0"
+                                      Header="Service Order"
+                                      IsExpanded="True"
+                                      Grid.ColumnSpan="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                        <UIControls:UIServiceEpisodeOrders
+                                       Grid.Column="0" 
+                                       Margin="2"
+                                    Grid.Row="1"
+                                       IsEnabled="{Binding Path=IsPatient,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+                                    </UIControls:UIServiceEpisodeOrders>
+                                    <UIControls:UIServiceDeliveryServiceOrderDtls
+                        Grid.Column="1" 
+                        Margin="2"
+                        Grid.Row="1"
+                        x:Name="ucServiceDeliveryServiceOrderDtls"></UIControls:UIServiceDeliveryServiceOrderDtls>
+                                </Grid>
+                                <Expander.Style>
+                                    <Style BasedOn="{StaticResource ExpanderStyle}" TargetType="{x:Type Expander}">
+                                        <Setter Property="Expander.Visibility" Value="Collapsed"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=HasServicePrivilege}" Value="true" >
+                                                <Setter Property="Expander.Visibility" Value="Visible"></Setter>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=IsFromPharmacyPanel}" Value="true" >
+                                                <Setter Property="Expander.Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=IsCafeteriaBillingForIP}" Value="true" >
+                                                <Setter Property="Expander.Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=IsEnableCafeteriaTab}" Value="true" >
+                                                <Setter Property="Expander.Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Expander.Style>
+                            </Expander>
+                            <UIControls:UIServiceDeliveryDescription 
+                        Grid.ColumnSpan="2" 
+                        Margin="2"
+                        Grid.Row="2"
+                        Name="ucServiceDeliveryServicesDescription"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                                    <!--<UIControls:UIServiceDeliveryDescription.Style>
+                                    <Style>
+                                        <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="240"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsPatient}" Value="false">
+                                                <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="210"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </UIControls:UIServiceDeliveryDescription.Style>-->
+                                </UIControls:UIServiceDeliveryDescription>
+                        </Grid>
+                        </TabItem>
+                        <TabItem 
+                Name="tabPharmacyOrder" 
+                Header="Pharmacy Orders">
+                            <TabItem.Style>
+                                <Style BasedOn="{StaticResource TabItemStyle}" TargetType="{x:Type TabItem}">
+                                <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=HasPharmacyPrivilege}" Value="true" >
+                                            <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                        </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsFromPharmacyPanel}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsCafeteriaBillingForIP}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsEnableCafeteriaTab}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsFromPharmacyPanel}" Value="false" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                                </Style>
+                            </TabItem.Style>
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition  Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.Style>
+                                    <Style>
+                                        <Setter Property="Grid.Visibility" Value="Visible"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsPharmacyOrdersVisible}" Value="false">
+                                                <Setter Property="Grid.Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                            <Expander Grid.Row="0"
+                                      Grid.Column="0"
+                                      IsExpanded="True"        
+                                      Header="{Binding Path=StrDiagnosis,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                       Style="{DynamicResource ExpanderStyle}"
+                                      Grid.ColumnSpan="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <UIControls:UIServiceEpisodeOrders
+                                Grid.Column="0"
+                                    Grid.Row="1"
+                                IsEnabled="{Binding Path=IsPatient,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                         IsAllergicOrder="{Binding Path=IsAllergicOrder,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></UIControls:UIServiceEpisodeOrders>
+                                    <UIControls:UIServiceDeliveryPharmacyOrderDtls 
+                                        Grid.Column="1" 
+                                        Grid.Row="1"
+                                        Margin="2"
+                                        Name="UcPharmacyOrderDtls"
+                                        IsBarCodeFocus="{Binding Path=IsBarCodeFocus,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                        IsAddButtonFocus="{Binding Path=IsAddButtonFocus,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"></UIControls:UIServiceDeliveryPharmacyOrderDtls>
+                                </Grid>
+                            </Expander>
+                            <UIControls:UIServiceDeliveryDescription
+                                Grid.Row="2" 
+                                Grid.ColumnSpan="2"
+                                Name="ucServiceDeliveryPharmacyDescription"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
+                                    <!--<UIControls:UIServiceDeliveryDescription.Style>
+                                    <Style>
+                                        <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="220"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsPatient}" Value="false">
+                                                <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="180"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </UIControls:UIServiceDeliveryDescription.Style>-->
+                                </UIControls:UIServiceDeliveryDescription>                            
+                            </Grid>
+                        </TabItem>
+                    <TabItem Name="tabCafeteriaOrder" 
+                             Header="Cafeteria Orders"
+                             Tag="Cafeteria">
+<!--{Binding Path=DtDynamicLabel/CAFETERIA_ORDERS,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}-->
+                        <TabItem.Style>
+                            <Style BasedOn="{StaticResource TabItemStyle}" TargetType="{x:Type TabItem}">
+                                <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                <Style.Triggers>
+                                    <!--<DataTrigger Binding="{Binding Path=HasCafeteriaPrivilege}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsFromPharmacyPanel}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Collapsed"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsCafeteriaBillingForIP}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsPatient}" Value="false" >
+                                        <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>-->
+                                    <DataTrigger Binding="{Binding Path=IsEnableCafeteriaTab}" Value="true" >
+                                        <Setter Property="TabItem.Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TabItem.Style>
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition  Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.Style>
+                                <Style>
+                                    <Setter Property="Grid.Visibility" Value="Visible"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsCafeteriaOrdersVisible}" Value="false">
+                                            <Setter Property="Grid.Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Expander Grid.Row="0"
+                                      Grid.Column="0"
+                                      Header="Cafeteria Order"
+                                      IsExpanded="True"
+                                      Grid.ColumnSpan="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <UIControls:UIServiceEpisodeOrders Name="uiCafeteriaEpisodeOrders"
+                                       Grid.Column="0" 
+                                       Margin="2"
+                                       Grid.Row="1"
+                                     >
+                                    </UIControls:UIServiceEpisodeOrders>
+                                    <UIControls:UIServiceDeliveryServiceOrderDtls
+                                               Grid.Column="1" 
+                                               Margin="2"
+                                               Grid.Row="1"
+                                               x:Name="ucCafeteriaDeliveryServiceOrderDtls"></UIControls:UIServiceDeliveryServiceOrderDtls>
+                                </Grid>
+                                <Expander.Style>
+                                    <Style BasedOn="{StaticResource ExpanderStyle}" TargetType="{x:Type Expander}">
+                                        <Setter Property="Expander.Visibility" Value="Collapsed"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsEnableCafeteriaTab}" Value="true" >
+                                                <Setter Property="Expander.Visibility" Value="Visible"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Expander.Style>
+                            </Expander>
+                            <UIControls:UIServiceDeliveryDescription 
+                        Grid.ColumnSpan="2" 
+                        Margin="2"
+                        Grid.Row="2"
+                        Name="ucCafeteriaDeliveryServicesDescription"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+                                <!--<UIControls:UIServiceDeliveryDescription.Style>
+                                    <Style>
+                                        <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="240"></Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsPatient}" Value="false">
+                                                <Setter Property="UIControls:UIServiceDeliveryDescription.Height" Value="210"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </UIControls:UIServiceDeliveryDescription.Style>-->
+                            </UIControls:UIServiceDeliveryDescription>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+                </Border>
+            <Rectangle Fill="LightGray"
+                       Grid.Row="2"                      
+                       Height="3"                      
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Margin="1" />
+                <!--<Grid Grid.Row="3">
+                <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Margin="2"
+                                        Grid.Row="2"
+                                        Grid.Column="1">
+                    <UIElements:giCheckBox Content="Print"
+                                           IsChecked="True"
+                                           Margin="2"></UIElements:giCheckBox>
+                    <UIElements:giButton Content="Save"                                                     
+                                         Width="50"
+                                         Margin="2"
+                                         Click="btnSave_click"
+                                         HorizontalAlignment="Right"></UIElements:giButton>
+                    <UIElements:giButton Content="Clear"
+                                         Width="50"                                                 
+                                         Margin="2"
+                                         Click="btnClear_click"
+                                         HorizontalAlignment="Right"
+                                         VerticalAlignment="Center"></UIElements:giButton>
+                </StackPanel>
+                <Grid.Style>
+                    <Style>
+                        <Setter Property="Grid.Visibility"
+                                                Value="Collapsed"></Setter>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsServicePanel,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Value="true">
+                                <Setter Property="Grid.Visibility"
+                                                        Value="Visible"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+            </Grid>-->
+                <!--<StackPanel Grid.Row="3" 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <UIElements:giButton
+                MinWidth="40"
+                Width="75"
+                Height="25"
+                Margin="2,2,2,5" 
+                Content="Save"
+                x:Name="btnSave"></UIElements:giButton>
+            <UIElements:giButton
+                MinWidth="40"
+                Width="75"
+                Height="25"
+                Margin="2,2,2,5" 
+                Content="Clear"></UIElements:giButton>
+        </StackPanel>-->
+        </Grid>
+    </Border>
+
+</UserControl>
